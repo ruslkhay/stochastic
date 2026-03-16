@@ -48,7 +48,7 @@ class MarkovChain(BaseSequenceProcess):
 
     @transition.setter
     def transition(self, values):
-        values = np.array(values, copy=False)
+        values = np.asarray(values)
         if values.ndim != 2 or values.shape[0] != values.shape[1]:
             raise ValueError("Transition matrix must be a square matrix.")
         for row in values:
@@ -63,7 +63,7 @@ class MarkovChain(BaseSequenceProcess):
 
     @initial.setter
     def initial(self, values):
-        values = np.array(values, copy=False)
+        values = np.asarray(values)
         if values.ndim != 1 or len(values) != len(self.transition):
             raise ValueError(
                 "Initial state probabilities must be one-to-one with states."
