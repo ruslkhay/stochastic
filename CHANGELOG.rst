@@ -1,7 +1,7 @@
 Release Changelog
 -----------------
 
-0.8.0 (2026-03-25)
+1.0.0 (2026-03-25)
 ~~~~~~~~~~~~~~~~~~
 
 * Support Python 3.9+ and drop Python 3.8 and below
