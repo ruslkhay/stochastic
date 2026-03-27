@@ -30,6 +30,12 @@ The ``stochastic`` package is available on pypi and can be installed using pip
 
     pip install stochastic
 
+The ``stochastic`` package is available on conda-forge and can be installed using conda
+
+.. code-block:: shell
+
+    conda install stochastic
+
 Dependencies
 ~~~~~~~~~~~~
 

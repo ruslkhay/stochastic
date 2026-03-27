@@ -1,6 +1,16 @@
 Release Changelog
 -----------------
 
+0.8.0 (2026-03-25)
+~~~~~~~~~~~~~~~~~~
+
+* Support Python 3.9+ and drop Python 3.8 and below
+* Update dependencies: numpy 2.0+, scipy 1.11+, and all dev dependencies
+* Fix NumPy 2.0 compatibility in ``MarkovChain`` property setters
+* Fix ``ColoredNoise`` to use instance RNG for reproducibility
+* Fix ``RandomWalk`` crash when no ``steps`` argument is provided
+* Modernise build system, CI pipeline, and remove obsolete configuration
+
 0.7.0 (2022-07-11)
 ~~~~~~~~~~~~~~~~~~
 

@@ -23,12 +23,13 @@ class RandomWalk(BaseSequenceProcess):
     def __init__(self, steps=None, weights=None, rng=None):
         super().__init__(rng=rng)
         self.steps = steps or [-1, 1]
-        length = len(steps)
+        # Use self.steps (the validated/stored value) not the raw parameter
+        length = len(self.steps)
         if length < 1:
             raise ValueError("Steps must have at least one element.")
         if weights is None:
-            self.weights = [1 for _ in steps]
-            self.p = [1.0 / length for _ in steps]
+            self.weights = [1 for _ in self.steps]
+            self.p = [1.0 / length for _ in self.steps]
         else:
             if len(weights) != length:
                 raise ValueError("Steps and probabilities must have same length.")

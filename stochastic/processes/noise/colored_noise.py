@@ -76,8 +76,9 @@ class ColoredNoise(BaseTimeProcess):
                 for w in self._frequencies[1 : self._half]
             ]
 
-        gn_real = np.random.normal(size=self._half - 1)
-        gn_imag = np.random.normal(size=self._half - 1)
+        # Use self.rng throughout to respect custom/seeded generators
+        gn_real = self.rng.normal(size=self._half - 1)
+        gn_imag = self.rng.normal(size=self._half - 1)
         fft = self._scale * (gn_real + 1j * gn_imag)
 
         if n % 2 == 0:
@@ -87,7 +88,7 @@ class ColoredNoise(BaseTimeProcess):
                     fft,
                     [
                         np.sqrt(0.5 * (1 / -self._frequencies[self._half]) ** self.beta)
-                        * np.random.normal()
+                        * self.rng.normal()
                     ],
                     np.conj(fft)[::-1],
                 )

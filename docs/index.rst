@@ -32,6 +32,12 @@ installed using ``pip``:
 
    pip install stochastic
 
+Stochastic is also available on `conda-forge <https://anaconda.org/conda-forge/stochastic>`_ and can be installed using ``conda``:
+
+.. code-block:: bash
+
+   conda install stochastic
+
 Dependencies
 ------------
 
@@ -41,7 +47,7 @@ certain random variable generation.
 Compatibility
 -------------
 
-Stochastic is tested on Python versions 3.6, 3.7, and 3.8.
+Stochastic is tested on Python versions 3.9 and above.
 
 Performance
 -----------
